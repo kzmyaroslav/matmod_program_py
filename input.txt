@@ -1,0 +1,67 @@
+# ============================================================
+# РАСЧЁТ ОСВЕЩЁННОСТИ
+# Все размеры указаны в метрах
+# Световой поток — лм
+# Сила света — кд
+# Углы — градусы
+# ============================================================
+
+[ROOM]
+UNIT = M
+X = 10.0
+Y = 8.0
+Z = 3.0
+
+[GRID]
+STEP = 0.1
+
+[SOURCES]
+# Количество активных источников: 1..3
+COUNT = 3
+
+
+[SOURCE_1]
+TYPE = SPHERE
+
+X = 5.0
+Y = 4.0
+Z = 2.8
+
+DIAMETER = 0.10
+
+PHOTOMETRY = INTENSITY
+INTENSITY = 1000
+
+
+[SOURCE_2]
+TYPE = DISK
+
+X = 2.0
+Y = 2.0
+Z = 2.7
+
+DIAMETER = 0.10
+
+SIDE = DOWN
+
+PHOTOMETRY = FLUX
+FLUX = 1500
+
+
+[SOURCE_3]
+TYPE = CYLINDER
+
+X = 7.0
+Y = 6.0
+Z = 2.5
+
+DIAMETER = 0.10
+HEIGHT = 0.10
+
+PHOTOMETRY = INTENSITY
+INTENSITY_45 = 500
+
+
+[CALCULATION]
+DEBUG = FALSE
+DECIMAL_PLACES = 2
